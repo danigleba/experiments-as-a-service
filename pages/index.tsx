@@ -400,8 +400,8 @@ export default function Home() {
       <div className="md:absolute top-0 flex items-center justify-start w-full py-6 md:py-12 px-6">
         <p className="text-xl font-bold">[Nombre]</p>
       </div>
-      <div className="flex flex-col items-start justify-start md:w-1/2 text-left w-full px-6 text-center md:text-left mt-12 md:mt-0">
-          <div className="space-y-12">
+      <div className="flex flex-col items-start justify-start md:w-1/2 text-left w-full px-6 text-center md:text-left mt-6 md:mt-12 md:mt-0">
+          <div className="space-y-6 md:space-y-12">
             <div className="space-y-6">
               <p className="font-black text-3xl md:text-6xl leading-12">Find collaborators for your papers in minutes</p>
               <p className="text-sm md:text-base">[Nombre] connects researchers who are looking for external collaborators with researchers who, after gaining experience in a series of experiments or analyses, are open to collaborate with laboratories that need them.</p>
@@ -412,7 +412,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="absolute md:static bottom-0 md:w-1/2 w-full h-3/4 md:h-full z-10 -mb-96 md:-mb-0">
+        <div className="absolute md:static bottom-0 md:w-1/2 w-full h-3/4 md:h-full z-10 -mb-72 md:-mb-0">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
     </main>
