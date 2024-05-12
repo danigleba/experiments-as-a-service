@@ -396,7 +396,7 @@ export default function Home() {
     },
   ];
   return (
-    <main className={`flex flex-col md:flex-row items-center justify-between fixed w-screen h-screen overflow-hidden text-[#30313D] md:px-12 ${inter.className}`}>
+    <main className={`flex flex-col md:flex-row md:items-center md:justify-between fixed w-screen h-screen overflow-hidden text-[#30313D] md:px-12 ${inter.className}`}>
       <div className="md:absolute top-0 flex items-center justify-start w-full py-6 md:py-12 px-6">
         <p className="text-xl font-bold">[Nombre]</p>
       </div>
@@ -404,9 +404,7 @@ export default function Home() {
           <div className="space-y-12">
             <div className="space-y-6">
               <p className="font-black text-3xl md:text-6xl leading-12">Find collaborators for your papers in minutes</p>
-              <p className="text-sm md:text-base">[Nombre] connects researchers who are looking for external collaborators with
-researchers who, after gaining experience in a series of experiments or analyses, are
-open to collaborate with laboratories that need them.</p>
+              <p className="text-sm md:text-base">[Nombre] connects researchers who are looking for external collaborators with researchers who, after gaining experience in a series of experiments or analyses, are open to collaborate with laboratories that need them.</p>
             </div>
             <div className="flex flex-col md:flex-row items-center justify-start gap-6 pt-6">
               <button className="bg-[#30313D]">Find collaborators</button>
@@ -414,9 +412,9 @@ open to collaborate with laboratories that need them.</p>
             </div>
           </div>
         </div>
-        <div className="md:w-1/2 w-full h-full z-10">
-  <World data={sampleArcs} globeConfig={globeConfig} />
-</div>
+        <div className="absolute md:static bottom-0 md:w-1/2 w-full h-3/4 md:h-full z-10 -mb-96 md:-mb-0">
+          <World data={sampleArcs} globeConfig={globeConfig} />
+        </div>
     </main>
   )
 }
