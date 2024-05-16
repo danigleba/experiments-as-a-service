@@ -412,7 +412,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="absolute md:static bottom-0 md:w-1/2 w-full h-3/4 md:h-full z-10 -mb-72 md:-mb-0">
+        <div className="absolute md:static bottom-0 md:w-1/2 w-full h-3/4 md:h-full z-10 -mb-72 md:-mb-0 md:p-24">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
     </main>
