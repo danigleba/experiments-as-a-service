@@ -3,6 +3,7 @@ import { Inter } from "next/font/google"
 import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] })
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
@@ -10,6 +11,7 @@ const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World)
 });
 
 export default function Home() {
+  const router = useRouter()
   const globeConfig = {
     pointSize: 4,
     globeColor: "#062056",
@@ -407,8 +409,8 @@ export default function Home() {
               <p className="text-sm md:text-base">Portiko connects researchers who are looking for external collaborators with researchers who, after gaining experience in a series of experiments or analyses, are open to collaborate with laboratories that need them.</p>
             </div>
             <div className="flex flex-col md:flex-row items-center justify-start gap-6 pt-6">
-              <button className="bg-[#30313D]">Find collaborators</button>
-              <button className="border border-[#30313D] text-[#30313D]">Collaborate on papers</button>
+              <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdQq0ZjPJEn3ZiT-L49AKhd6upliBvka-HaMdhuMsr44O2i3w/viewform?usp=sf_link" className="bg-[#30313D]">Find collaborators</a>
+              <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfPoDhNKdcui13eF1pG3MWXKJ4IqH1UjJ_ogmvPYTHyKbHQ8g/viewform?usp=sf_link" className="border border-[#30313D] text-[#30313D]">Collaborate on papers</a>
             </div>
           </div>
         </div>

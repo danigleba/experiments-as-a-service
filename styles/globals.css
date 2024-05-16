@@ -6,4 +6,8 @@
   button {
     @apply w-full md:w-max font-medium py-3 px-16 text-white rounded text-sm;
   }
+
+  a {
+    @apply w-full md:w-max font-medium py-3 px-16 text-white rounded text-sm;
+  }
 }
