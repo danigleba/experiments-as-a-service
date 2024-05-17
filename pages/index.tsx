@@ -1,14 +1,12 @@
-import Image from "next/image"
 import { Inter } from "next/font/google"
-import React from "react";
-import { motion } from "framer-motion";
-import dynamic from "next/dynamic";
-import { useRouter } from "next/router";
+import React from "react"
+import dynamic from "next/dynamic"
+import { useRouter } from "next/router"
 
 const inter = Inter({ subsets: ["latin"] })
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
   ssr: false,
-});
+})
 
 export default function Home() {
   const router = useRouter()
@@ -33,8 +31,8 @@ export default function Home() {
     initialPosition: { lat: 22.3193, lng: 114.1694 },
     autoRotate: true,
     autoRotateSpeed: 0.5,
-  };
-  const colors = ["#30313D", "#30313D", "#30313D"];
+  }
+  const colors = ["#30313D", "#30313D", "#30313D"]
   const sampleArcs = [
     {
       order: 1,
@@ -52,15 +50,6 @@ export default function Home() {
       endLat: 3.139,
       endLng: 101.6869,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 1,
-      startLat: -19.885592,
-      startLng: -43.951191,
-      endLat: -1.303396,
-      endLng: 36.852443,
-      arcAlt: 0.5,
       color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
@@ -119,24 +108,6 @@ export default function Home() {
     },
     {
       order: 4,
-      startLat: 11.986597,
-      startLng: 8.571831,
-      endLat: -15.595412,
-      endLng: -56.05918,
-      arcAlt: 0.5,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 4,
-      startLat: -34.6037,
-      startLng: -58.3816,
-      endLat: 22.3193,
-      endLng: 114.1694,
-      arcAlt: 0.7,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 4,
       startLat: 51.5072,
       startLng: -0.1276,
       endLat: 48.8566,
@@ -169,15 +140,6 @@ export default function Home() {
       endLat: 48.8566,
       endLng: -2.3522,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 6,
-      startLat: -15.432563,
-      startLng: 28.315853,
-      endLat: 1.094136,
-      endLng: -63.34546,
-      arcAlt: 0.7,
       color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
@@ -244,48 +206,12 @@ export default function Home() {
       color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
-      order: 8,
-      startLat: 1.3521,
-      startLng: 103.8198,
-      endLat: 40.7128,
-      endLng: -74.006,
-      arcAlt: 0.5,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
       order: 9,
       startLat: 51.5072,
       startLng: -0.1276,
       endLat: 34.0522,
       endLng: -118.2437,
       arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 9,
-      startLat: 22.3193,
-      startLng: 114.1694,
-      endLat: -22.9068,
-      endLng: -43.1729,
-      arcAlt: 0.7,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 9,
-      startLat: 1.3521,
-      startLng: 103.8198,
-      endLat: -34.6037,
-      endLng: -58.3816,
-      arcAlt: 0.5,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 10,
-      startLat: -22.9068,
-      startLng: -43.1729,
-      endLat: 28.6139,
-      endLng: 77.209,
-      arcAlt: 0.7,
       color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
@@ -396,25 +322,28 @@ export default function Home() {
       arcAlt: 0.3,
       color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
-  ];
+  ]
   return (
-    <main className={`flex flex-col md:flex-row md:items-center md:justify-between fixed w-screen h-screen overflow-hidden text-[#30313D] md:px-12 ${inter.className}`}>
-      <div className="md:absolute top-0 flex items-center justify-start w-full py-6 md:py-12 px-6">
+    <main className={`flex flex-col md:flex-row md:items-center md:justify-between fixed w-screen h-screen overflow-hidden text-[#30313D] ${inter.className}`}>
+      <div className="md:absolute top-0 flex items-center justify-start w-full py-6 md:py-12 px-6 md:px-12">
         <p className="text-xl font-bold">Portiko</p>
       </div>
-      <div className="flex flex-col items-start justify-start md:w-1/2 text-left w-full px-6 text-center md:text-left mt-6 md:mt-12 md:mt-0">
-          <div className="space-y-6 md:space-y-12">
-            <div className="space-y-6">
-              <p className="font-black text-3xl md:text-6xl leading-12">Find collaborators for your scientific research in minutes</p>
-              <p className="text-sm md:text-base">Portiko connects researchers who are looking for external collaborators with researchers who, after gaining experience in a series of experiments or analyses, are open to collaborate with laboratories that need them.</p>
-            </div>
-            <div className="flex flex-col md:flex-row items-center justify-start gap-6 pt-6">
-             <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfPoDhNKdcui13eF1pG3MWXKJ4IqH1UjJ_ogmvPYTHyKbHQ8g/viewform?usp=sf_link" className="bg-[#30313D]">Collaborate on papers</a>
-              <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdQq0ZjPJEn3ZiT-L49AKhd6upliBvka-HaMdhuMsr44O2i3w/viewform?usp=sf_link" className="border border-[#30313D] text-[#30313D]">Find collaborators</a>
-            </div>
+      <div className="z-50 flex flex-col items-start justify-start md:w-1/2 text-left w-full px-6 text-center md:text-left mt-6 md:mt-0 md:mt-0 md:pl-12">
+        <div className="space-y-6 md:space-y-12">
+          <div className="space-y-6">
+            <p className="font-black text-3xl md:text-6xl leading-12">Find scientific papers to collaborate on, in minutes</p>
+            <p className="text-sm md:text-base">Portiko connects researchers who are looking for external collaborators with researchers who, after gaining experience in a series of experiments or analyses, are open to collaborate with laboratories that need them.</p>
           </div>
-        </div>
-        <div className="absolute md:static bottom-0 md:w-1/2 w-full h-3/4 md:h-full z-10 -mb-72 md:-mb-0 md:p-24">
+          <div className="flex flex-col md:flex-row items-center justify-start gap-6 pt-6 z-50">
+            <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfPoDhNKdcui13eF1pG3MWXKJ4IqH1UjJ_ogmvPYTHyKbHQ8g/viewform?usp=sf_link" className="bg-[#30313D]">Collaborate on papers</a>
+            <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdQq0ZjPJEn3ZiT-L49AKhd6upliBvka-HaMdhuMsr44O2i3w/viewform?usp=sf_link" className="border border-[#30313D] text-[#30313D]">Find collaborators</a>
+          </div>
+        </div> 
+      </div>
+      <div className="hidden md:flex md:fixed bottom-0 md:top-0 w-full aspect-square md:h-full md:ml-96 md:p-24 md:pr-46 md:pt-24">
+        <World data={sampleArcs} globeConfig={globeConfig} />
+      </div>
+      <div className="md:hidden absolute md:static bottom-0 md:w-1/2 w-full h-3/4 md:h-full z-10 -mb-72 md:-mb-0 md:p-24">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
     </main>
